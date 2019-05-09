@@ -1,0 +1,27 @@
+@LoginPageFunctionality
+Feature: Home Page Functionality
+
+  Background:                         # Login.feature:4
+    Given Navigate to HMS Application # CommonSteps.i_navigate_to_aviall()
+Verify User Login is Completed Execution
+
+  @Regression
+  Scenario: Verify User Login                                # Login.feature:8
+    When I Login to HMS Application Using Below Credentials: # LoginSteps.i_login_to_bgs_application_username_password(DataTable)
+    Then 'HOME' Page is Opened                               # CommonSteps.page_is_opened(String)
+    Then Validate the Scenario                               # CommonSteps.verify_result()
+
+  Background:                         # Login.feature:4
+    Given Navigate to HMS Application # CommonSteps.i_navigate_to_aviall()
+Verify User Logout is Completed Execution
+
+  @Regression
+  Scenario: Verify User Logout         # Login.feature:16
+    When I Logout from HMS Application # LoginSteps.userLogout()
+      java.lang.AssertionError: Not able to click on  Logout
+      	at org.junit.Assert.fail(Assert.java:88)
+      	at com.framework.utility.CommonFunctions.click(CommonFunctions.java:450)
+      	at com.framework.stepDefinitions.LoginSteps.userLogout(LoginSteps.java:50)
+      	at ✽.When I Logout from HMS Application(Login.feature:17)
+
+    Then Validate the Scenario         # CommonSteps.verify_result()
