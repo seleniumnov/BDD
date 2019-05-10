@@ -26,7 +26,7 @@ public class GlobalVariables {
 
 	//Application URLs
 	
-	public static String HMS = "http://selenium4testing.com/hms/";
+	public static String QA = "http://selenium4testing.com/hms/";
 	
 	// Browser
 	public static final String BROWSER = getBrowser();
@@ -50,47 +50,22 @@ public class GlobalVariables {
 
 	public static String getTestDataPath() {
 
-		String filePath = "";
+		
 		String envName = System.getProperty("env");
 
 		if (null == envName || envName.isEmpty()) {
 			return System.getProperty("user.dir")+"//TestData//QA//";
 		}
 
-		switch (envName) {
-		case "Test":
-			filePath = System.getProperty("user.dir")+"//TestData////";
-			break;
-		case "Test1":
-			filePath = System.getProperty("user.dir")+"//TestData////";
-			break;
-		case "QA":
-			filePath = System.getProperty("user.dir")+"//TestData//QA//";
-			break;			
-		default:
-			filePath = System.getProperty("user.dir")+"//TestData////";
-			break;
-		}
-		return filePath;
+		return System.getProperty("user.dir")+"//TestData//"+envName+"//";
 	}
 
 	public static String getApplicationUrl() {
 		String envName = System.getProperty("env");
 
-		if (null == envName || envName.isEmpty()) {
-			return HMS;
-		}
 		
-		switch (envName) {
-		case "DEV":
-			return "Test";
-		case "VAL":
-			return "Test";
-		case "QA":
-			return HMS;			
-		default:
-			return "";
-		}
+		
+		return envName;
 
 	}
 

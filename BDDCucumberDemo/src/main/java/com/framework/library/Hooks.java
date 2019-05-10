@@ -85,9 +85,8 @@ public class Hooks {
 			driver = new ChromeDriver(chromeOptions);
 
 			maximizeBrowserWindow();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		}
-		CommonFunctions.waitForpageToLoad(driver, GlobalVariables.BROWSER);
+		
 
 		if (!beforeall) {
 			/* Clear screenshots folder */

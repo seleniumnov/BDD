@@ -11,6 +11,14 @@ Feature: Home Page Functionality
       | password | @testdata.login.validuser.password |
     Then 'HOME' Page is Opened
     Then Validate the Scenario
+    
+    @Regression
+  Scenario: Verify User Login Second Time
+    When I Login to HMS Application Using Below Credentials:
+      | username | @testdata.login.validuser.username |
+      | password | @testdata.login.validuser.password |
+    Then 'HOME' Page is Opened
+    Then Validate the Scenario
 
   @Regression
   Scenario: Verify User Logout

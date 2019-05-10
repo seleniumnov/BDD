@@ -9,12 +9,14 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(strict = true, features = { "src/test/resources/FeatureFiles" }, 
-		plugin = {
-		"pretty", "html:target/site/cucumber-pretty", "json:target/cucumber.json",
-		"com.cucumber.listener.ExtentCucumberFormatter:Reports/extentReport.html" }, tags = {
-				"@LoginPageFunctionality" } // ~@Ignore
-		, monochrome = true, glue = { "com.framework.stepDefinitions", "com.framework.library" }
+@CucumberOptions(strict = true, 
+		features = { "src/test/resources/FeatureFiles" }, 
+		plugin = { "pretty",
+				"json:target/cucumber.json",
+				"com.cucumber.listener.ExtentCucumberFormatter:Reports/cucumber-reports/ExecutionReport.html" }, 
+		tags = { "@Regression" }, // ~@Ignore
+		monochrome = true, 
+		glue = { "com.framework.stepDefinitions", "com.framework.library" }
 
 )
 

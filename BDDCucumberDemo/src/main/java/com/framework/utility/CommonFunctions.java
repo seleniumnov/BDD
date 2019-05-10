@@ -102,17 +102,7 @@ public class CommonFunctions {
 		driver.switchTo().window(tab.get(0));
 	}
 
-	public static void waitForpageToLoad(WebDriver driver, String strbrowserType) {
-		try {
-
-			if (strbrowserType.equalsIgnoreCase("firefox"))
-				Thread.sleep(60000);
-			else
-				driver.manage().timeouts().implicitlyWait(GlobalVariables.SynchronizationTime, TimeUnit.SECONDS);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+	
 
 	// Hover On the Particular Element
 	public static void hover(WebDriver driver, WebElement element) {
@@ -149,54 +139,9 @@ public class CommonFunctions {
 		}
 	}
 
-	// Page Load wait
-	public static void waitForpageToLoad(WebDriver driver) {
-		try {
-			driver.manage().timeouts().implicitlyWait(GlobalVariables.SynchronizationTime, TimeUnit.SECONDS);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+	
 
-	/*
-	 * public List<String> captureAccountNums() { List<String> accounts = null; try
-	 * { Map<String, String> data = getJsonData("registration",
-	 * "existingPersonalAccount"); accounts = new ArrayList<>();
-	 * accounts.add(data.get("account1")); accounts.add(data.get("account2"));
-	 * accounts.add(data.get("account3")); accounts.add(data.get("account4"));
-	 * accounts.add(data.get("account5")); accounts.add(data.get("account6"));
-	 * accounts.add(data.get("account7")); accounts.add(data.get("account8"));
-	 * accounts.add(data.get("account9")); accounts.add(data.get("account10")); }
-	 * catch (Exception e) {
-	 * 
-	 * } return accounts; }
-	 * 
-	 * @SuppressWarnings({ "rawtypes", "unchecked" }) public Map<String, String>
-	 * getJsonData(String fileName, String value) {
-	 * 
-	 * Map<String, String> testData = new HashMap<>(); try { if (fileName.length() >
-	 * 1 && !fileName.isEmpty() && !fileName.equals(null)) { Object obj = new
-	 * JSONParser() .parse(new FileReader(System.getProperty("user.dir") +
-	 * "/TestData/QA/" + fileName + ".json"));
-	 * 
-	 * org.json.simple.JSONObject jobj = (org.json.simple.JSONObject) obj;
-	 * 
-	 * Map data = (Map) jobj.get(value);
-	 * 
-	 * Iterator<Map.Entry> loop = data.entrySet().iterator();
-	 * 
-	 * while (loop.hasNext()) {
-	 * 
-	 * Map.Entry pair = loop.next();
-	 * 
-	 * String key = pair.getKey().toString(); String value1 =
-	 * pair.getValue().toString(); testData.put(key, value1);
-	 * 
-	 * }
-	 * 
-	 * } else { Assert.fail(); } } catch (Exception e) { e.getStackTrace(); } return
-	 * testData; }
-	 */
+	
 	public static void waitForBrowserToLoad(WebDriver driver) {
 		try {
 			Boolean readyStateComplete = false;
@@ -219,7 +164,7 @@ public class CommonFunctions {
 
 	public static void input(WebElement element, String value, String fieldName) {
 		defaultWait(element);
-		// waitForJStoLoad();
+		
 		try {
 			if (element.isDisplayed() || element.isEnabled()) {
 				element.click();
@@ -865,9 +810,7 @@ public class CommonFunctions {
 		}
 	}
 
-	public static void implicitWait(WebDriver driver, int time) {
-		driver.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
-	}
+	
 
 	public Double getAccountThroughAPI(String acntType) throws IOException {
 		Random rand = new Random();

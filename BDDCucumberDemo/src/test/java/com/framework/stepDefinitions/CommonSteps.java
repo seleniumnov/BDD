@@ -18,25 +18,16 @@ public class CommonSteps extends CommonFunctions {
 	HomePage home = new HomePage(driver);
 	LoginPage login = new LoginPage(driver);
 	
-
-	/*
-	 * @Then("^(.+) popup is opened$") public void popup_is_opened(String popup) {
-	 * 
-	 * try { Assert.assertEquals(true,
-	 * addtocartpopup.getAddtoCartPopUPCheckout().isDisplayed()); } catch (Exception
-	 * e) { Assert.fail(popup + " - is not displayed"); } }
-	 */
-
 	@Given("^Navigate to HMS Application$")
 	public void i_navigate_to_aviall() throws Throwable {
 		try {
 			
 			driver.manage().deleteAllCookies();
-			driver.navigate().to(GlobalVariables.HMS);
+			driver.navigate().to(GlobalVariables.QA);
 			waitForJStoLoad();
-			Logger.logTestInfo("Navigated to URL :" + GlobalVariables.HMS);
+			Logger.logTestInfo("Navigated to URL :" + GlobalVariables.QA);
 		}catch(Exception e) {
-			Logger.logTestInfo("Failed to navigate URL :" + GlobalVariables.HMS);
+			Logger.logTestInfo("Failed to navigate URL :" + GlobalVariables.QA);
 			e.getMessage();
 		}
 	}
