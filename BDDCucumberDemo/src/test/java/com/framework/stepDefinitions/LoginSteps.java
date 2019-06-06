@@ -2,10 +2,9 @@ package com.framework.stepDefinitions;
 import org.openqa.selenium.WebDriver;
 import org.junit.Assert;
 
-import com.bgs.pageObjects.HomePage;
-import com.bgs.pageObjects.LoginPage;
 import com.framework.library.Hooks;
-
+import com.framework.pageObjects.HomePage;
+import com.framework.pageObjects.LoginPage;
 import com.framework.utility.CommonFunctions;
 import com.framework.utility.Logger;
 

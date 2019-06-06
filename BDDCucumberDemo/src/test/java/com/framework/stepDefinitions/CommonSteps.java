@@ -1,11 +1,12 @@
 package com.framework.stepDefinitions;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import com.bgs.pageObjects.*;
+
 import com.framework.library.GlobalVariables;
 import com.framework.library.Hooks;
+import com.framework.pageObjects.HomePage;
+import com.framework.pageObjects.LoginPage;
 import com.framework.utility.CommonFunctions;
 import com.framework.utility.Logger;
 
@@ -28,6 +29,20 @@ public class CommonSteps extends CommonFunctions {
 			Logger.logTestInfo("Navigated to URL :" + GlobalVariables.QA);
 		}catch(Exception e) {
 			Logger.logTestInfo("Failed to navigate URL :" + GlobalVariables.QA);
+			e.getMessage();
+		}
+	}
+	
+	@Given("^Navigate to Facebook Application$")
+	public void i_navigate_to_facebook() throws Throwable {
+		try {
+			
+			driver.manage().deleteAllCookies();
+			driver.navigate().to(GlobalVariables.FB);
+			waitForJStoLoad();
+			Logger.logTestInfo("Navigated to URL :" + GlobalVariables.FB);
+		}catch(Exception e) {
+			Logger.logTestInfo("Failed to navigate URL :" + GlobalVariables.FB);
 			e.getMessage();
 		}
 	}
@@ -57,7 +72,6 @@ public class CommonSteps extends CommonFunctions {
 		
 		default:
 			// Statements
-
 		}
 
 		try {
@@ -75,19 +89,6 @@ public class CommonSteps extends CommonFunctions {
 			e.printStackTrace();
 		}
 
-	}
-
-	
-
-	@Then("^Verify for Available Products Text$")
-	public void available_text() throws Throwable {
-		try {
-			if(driver.findElement(By.xpath("//.[contains(text(),'available')]|//.[contains(text(),'Available')]")).isDisplayed()) {
-				soft.fail("Available text is present on page");			}
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
 	}
 
 }

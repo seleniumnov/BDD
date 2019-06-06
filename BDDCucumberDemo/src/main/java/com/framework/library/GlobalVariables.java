@@ -27,6 +27,7 @@ public class GlobalVariables {
 	//Application URLs
 	
 	public static String QA = "http://selenium4testing.com/hms/";
+	public static String FB = "https://www.facebook.com/";
 	
 	// Browser
 	public static final String BROWSER = getBrowser();
@@ -62,9 +63,7 @@ public class GlobalVariables {
 
 	public static String getApplicationUrl() {
 		String envName = System.getProperty("env");
-
-		
-		
+	
 		return envName;
 
 	}

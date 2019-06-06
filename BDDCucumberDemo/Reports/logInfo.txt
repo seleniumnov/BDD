@@ -1,30 +1,7 @@
 
-[May 10 2019, 06:18:05][INFO]: **************************************************************************************************************
-[May 10 2019, 06:18:05][INFO]: Start of Scenario : Verify User Login
-[May 10 2019, 06:18:06][INFO]: Navigated to URL :http://selenium4testing.com/hms/
-[May 10 2019, 06:18:22][INFO]: Entered Text into user name : admin
-[May 10 2019, 06:18:28][INFO]: Entered Text into password : admin
-[May 10 2019, 06:18:43][INFO]: Clicked on  : Login
-[May 10 2019, 06:18:43][INFO]: Successfully Logged into the Application
-[May 10 2019, 06:18:43][INFO]: HOME - Page is displayed
-[May 10 2019, 06:18:43][INFO]: <----- PASSED ------>
-[May 10 2019, 06:18:43][INFO]: End of Scenario : Verify User Login
-[May 10 2019, 06:18:43][INFO]: **************************************************************************************************************
-[May 10 2019, 06:18:47][INFO]: **************************************************************************************************************
-[May 10 2019, 06:18:47][INFO]: Start of Scenario : Verify User Login Second Time
-[May 10 2019, 06:18:48][INFO]: Navigated to URL :http://selenium4testing.com/hms/
-[May 10 2019, 06:19:06][INFO]: Entered Text into user name : admin
-[May 10 2019, 06:19:06][INFO]: Entered Text into password : admin
-[May 10 2019, 06:19:10][INFO]: Clicked on  : Login
-[May 10 2019, 06:19:10][INFO]: Successfully Logged into the Application
-[May 10 2019, 06:19:10][INFO]: HOME - Page is displayed
-[May 10 2019, 06:19:10][INFO]: <----- PASSED ------>
-[May 10 2019, 06:19:10][INFO]: End of Scenario : Verify User Login Second Time
-[May 10 2019, 06:19:10][INFO]: **************************************************************************************************************
-[May 10 2019, 06:19:14][INFO]: **************************************************************************************************************
-[May 10 2019, 06:19:14][INFO]: Start of Scenario : Verify User Logout
-[May 10 2019, 06:19:14][INFO]: Navigated to URL :http://selenium4testing.com/hms/
-[May 10 2019, 06:19:14][INFO]: Not able to click on  Logout
-[May 10 2019, 06:19:14][INFO]: <-------FAILED------->Refer Report
-[May 10 2019, 06:19:16][INFO]: End of Scenario : Verify User Logout
-[May 10 2019, 06:19:16][INFO]: **************************************************************************************************************
+[Jun 06 2019, 07:31:54][INFO]: **************************************************************************************************************
+[Jun 06 2019, 07:31:54][INFO]: Start of Scenario : Facebook Registration
+[Jun 06 2019, 07:32:00][INFO]: Navigated to URL :https://www.facebook.com/
+[Jun 06 2019, 07:32:00][INFO]: <----- PASSED ------>
+[Jun 06 2019, 07:32:00][INFO]: End of Scenario : Facebook Registration
+[Jun 06 2019, 07:32:00][INFO]: **************************************************************************************************************

@@ -57,34 +57,6 @@ public class Hooks {
 			System.setProperty("webdriver.ie.driver", GlobalVariables.IEDRIVERPATH);
 			driver = new InternetExplorerDriver();
 			maximizeBrowserWindow();
-
-		} else if (GlobalVariables.BROWSER.equalsIgnoreCase("Safari")) {
-			driver = new SafariDriver();
-		} else if (GlobalVariables.BROWSER.equalsIgnoreCase("Galaxy S5")
-				|| GlobalVariables.BROWSER.equalsIgnoreCase("Nexus 5X")
-				|| GlobalVariables.BROWSER.equalsIgnoreCase("Nexus 6P")
-				|| GlobalVariables.BROWSER.equalsIgnoreCase("iPhone 6")
-				|| GlobalVariables.BROWSER.equalsIgnoreCase("iPhone 6 Plus")
-				|| GlobalVariables.BROWSER.equalsIgnoreCase("iPad")
-				|| GlobalVariables.BROWSER.equalsIgnoreCase("iPad Pro")
-				|| GlobalVariables.BROWSER.equalsIgnoreCase("Microsoft Lumia 950")
-				|| GlobalVariables.BROWSER.equalsIgnoreCase("Nexus 10")
-				|| GlobalVariables.BROWSER.equalsIgnoreCase("Nexus 7")) {
-			Map<String, String> mobileEmulation = new HashMap<>();
-
-			mobileEmulation.put("deviceName", GlobalVariables.BROWSER);
-
-			ChromeOptions chromeOptions = new ChromeOptions();
-			chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
-			Proxy proxy = new Proxy();
-			proxy.setProxyType(ProxyType.AUTODETECT);
-			chromeOptions.setCapability("proxy", proxy);
-			chromeOptions.setAcceptInsecureCerts(true);
-
-			System.setProperty(GlobalVariables.CHROME, getChromeDriverPath());
-			driver = new ChromeDriver(chromeOptions);
-
-			maximizeBrowserWindow();
 		}
 		
 
@@ -134,7 +106,7 @@ public class Hooks {
 		scenario.write(scenario.getName()+" is Completed Execution");
 		if (scenario.isFailed()) {
 			
-			//scenario.embed(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES), "image/png");
+
 			  Logger.logTestInfo("<-------FAILED------->Refer Report"); String
 			  screenshotName = scenario.getName().replaceAll(" ", "_"); try {
 			  

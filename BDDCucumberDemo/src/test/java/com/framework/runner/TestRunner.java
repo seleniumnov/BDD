@@ -14,7 +14,7 @@ import cucumber.api.junit.Cucumber;
 		plugin = { "pretty",
 				"json:target/cucumber.json",
 				"com.cucumber.listener.ExtentCucumberFormatter:Reports/cucumber-reports/ExecutionReport.html" }, 
-		tags = { "@Regression" }, // ~@Ignore
+		tags = { "@FBRegistation" },
 		monochrome = true, 
 		glue = { "com.framework.stepDefinitions", "com.framework.library" }
 
